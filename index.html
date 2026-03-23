@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shirley Ji — Premium Real Estate Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="logo" onclick="go('home')">
+      <div class="logo-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      </div>
+      Shirley Ji
+    </a>
+    <div class="nav-links">
+      <a onclick="go('home')">Home</a>
+      <a onclick="go('calculator')">Calculator</a>
+      <a onclick="go('guide')">Buyer Guide</a>
+      <a onclick="go('about')">About</a>
+      <a onclick="go('blog')">Insights</a>
+    </div>
+    <button class="nav-cta" onclick="go('booking')">Book Consultation</button>
+    <div class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav">
+  <a onclick="go('home')">Home</a>
+  <a onclick="go('calculator')">Calculator</a>
+  <a onclick="go('guide')">Buyer Guide</a>
+  <a onclick="go('about')">About</a>
+  <a onclick="go('blog')">Insights</a>
+  <a onclick="go('booking')">Book Consultation</a>
+</div>
+
+<!-- ===== MAIN ===== -->
+<main>
+
+<!-- ======================================================= HOME ======================================================= -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section id="hero">
+    <video id="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-beautiful-suburb-with-homes-and-palm-trees-aerial-view-7-large.mp4" type="video/mp4">
+    </video>
+    <div id="hero-overlay"></div>
+    <div id="hero-content">
+      <span class="eyebrow">Shirley Ji — Premium Advisory</span>
+      <h1>Find your home with <em>clarity</em> and confidence</h1>
+      <p>Education-first guidance for first-time buyers. We walk beside you every step of the way — no pressure, no confusion.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="go('guide')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Start Your Journey
+        </button>
+        <button class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.3)" onclick="go('booking')">Book Free Consultation</button>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Families Guided</div></div>
+      <div class="stat-item"><div class="stat-num">4.9★</div><div class="stat-label">Average Rating</div></div>
+      <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Client Satisfaction</div></div>
+      <div class="stat-item"><div class="stat-num">12yr</div><div class="stat-label">Market Experience</div></div>
+    </div>
+  </div>
+
+  <!-- Who We Are -->
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <div class="two-col">
+        <div class="img-stack fade-up">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Premium Home">
+          <div class="img-badge">
+            <div class="badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem">Education First</div>
+              <div style="font-size:0.78rem;color:var(--muted)">Not sales-driven</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="section-label fade-up">Who We Are</span>
+          <h2 class="section-title fade-up fade-up-delay-1">We believe buying a home should feel <em style="font-style:italic;color:var(--accent)">empowering</em></h2>
+          <div class="divider fade-up fade-up-delay-2"></div>
+          <p class="section-sub fade-up fade-up-delay-2">Shirley Ji was founded on a simple principle: first-time buyers deserve honest, patient guidance — not high-pressure sales tactics.</p>
+          <p style="font-size:0.92rem;color:var(--muted);margin-top:16px;line-height:1.7" class="fade-up fade-up-delay-3">Our advisory approach means we walk beside you through every step of the process, explain your options in plain language, and ensure you feel fully confident before making any decision.</p>
+          <div class="fade-up fade-up-delay-4" style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+            <button class="btn-primary" onclick="go('about')">Meet Our Team</button>
+            <button class="btn-outline" onclick="go('guide')">Buyer Guide</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Help -->
+  <section class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="container-md" style="text-align:center;margin-bottom:56px">
+        <span class="section-label fade-up">How We Help</span>
+        <h2 class="section-title fade-up fade-up-delay-1">Your complete path from searching to owning</h2>
+      </div>
+      <div class="steps-grid fade-up fade-up-delay-2">
+        <div class="step-card"><div class="step-num">01</div><div class="step-title">Define Your Goals</div><p class="step-desc">We help you separate what you need from what you want, aligning your search with your life.</p></div>
+        <div class="step-card"><div class="step-num">02</div><div class="step-title">Get Pre-Approved</div><p class="step-desc">Connect with trusted lenders, understand your budget, and enter the market with confidence.</p></div>
+        <div class="step-card"><div class="step-num">03</div><div class="step-title">Explore Properties</div><p class="step-desc">Visit curated listings and learn to identify true value beyond surface-level aesthetics.</p></div>
+        <div class="step-card"><div class="step-num">04</div><div class="step-title">Make an Offer</div><p class="step-desc">We craft competitive, strategic offers and negotiate favorable terms on your behalf.</p></div>
+        <div class="step-card"><div class="step-num">05</div><div class="step-title">Due Diligence</div><p class="step-desc">Thorough inspections and legal reviews to fully protect your investment and interests.</p></div>
+        <div class="step-card"><div class="step-num">06</div><div class="step-title">Close & Celebrate</div><p class="step-desc">We guide you seamlessly to closing day, then hand over the keys to your new home.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <div class="two-col" style="gap:64px">
+        <div style="position:relative;z-index:2">
+          <span class="section-label" style="color:var(--gold)">Why Trust Us</span>
+          <h2 class="section-title fade-up" style="color:#fff">Real people. <em style="color:var(--gold)">Real results.</em> Real guidance.</h2>
+          <div class="divider fade-up"></div>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;line-height:1.75;margin-bottom:32px" class="fade-up fade-up-delay-1">We've guided over 500 families through one of the most important decisions of their lives. Our client-first approach means we only succeed when you do.</p>
+          <div style="display:flex;flex-direction:column;gap:16px" class="fade-up fade-up-delay-2">
+            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.88rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0"></div>
+              No hidden fees or commissions from sellers
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.88rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0"></div>
+              Transparent, education-first process
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.88rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0"></div>
+              Dedicated advisor from start to finish
+            </div>
+          </div>
+        </div>
+        <div class="fade-up fade-up-delay-2" style="position:relative;z-index:2">
+          <div class="video-player" onclick="playVideo(this)">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800" alt="Trust video thumbnail">
+            <div class="play-btn">
+              <div class="play-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:12px;text-align:center;letter-spacing:0.05em;text-transform:uppercase">Watch: Our Advisory Approach</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px">
+        <span class="section-label fade-up">Client Stories</span>
+        <h2 class="section-title fade-up fade-up-delay-1">Families who found their homes with us</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up fade-up-delay-1">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="t-quote">"As first-time buyers, we were overwhelmed. Shirley Ji made the entire process understandable and stress-free. We closed in 8 weeks."</p>
+          <div class="t-author">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="t-avatar" alt="Client">
+            <div><div class="t-name">Sarah & James K.</div><div class="t-role">First-time buyers, Portland</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up fade-up-delay-2">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="t-quote">"They never pushed us. They educated us. By the time we made our offer, we felt completely confident. I recommend Shirley Ji to everyone."</p>
+          <div class="t-author">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="t-avatar" alt="Client">
+            <div><div class="t-name">Michael T.</div><div class="t-role">Software Engineer, Bought Jan 2024</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up fade-up-delay-3">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="t-quote">"The calculator, the guides, the advisor — everything was clear and honest. I went from 'maybe one day' to signing my mortgage in 4 months."</p>
+          <div class="t-author">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100" class="t-avatar" alt="Client">
+            <div><div class="t-name">Priya N.</div><div class="t-role">Healthcare professional, Chicago</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR PHILOSOPHY ===== -->
+  <section class="section" style="background:var(--surface);overflow:hidden">
+    <div class="container">
+      <div class="two-col" style="gap:80px">
+        <div>
+          <span class="section-label fade-up">Legacy of Building Since 1968</span>
+          <h2 class="section-title fade-up fade-up-delay-1">Our <em style="font-style:italic;color:var(--accent)">Philosophy</em></h2>
+          <div class="divider fade-up fade-up-delay-1"></div>
+          <p style="font-size:1.08rem;font-weight:500;color:var(--accent);line-height:1.6;margin-bottom:20px" class="fade-up fade-up-delay-2">Shirley Ji is one of the region's most trusted real estate advisory firms.</p>
+          <p style="font-size:0.92rem;color:var(--muted);line-height:1.8;margin-bottom:16px" class="fade-up fade-up-delay-3">Shirley Ji has a long-standing heritage in real estate, rooted in a commitment to excellence. We create enduring homes that combine value and quality — consistently delivering properties and advisory services that grow in value over time.</p>
+          <p style="font-size:0.92rem;color:var(--muted);line-height:1.8;margin-bottom:32px" class="fade-up fade-up-delay-3">Founded with a vision of transparency and integrity, we have grown steadily through quality counsel and genuine relationships. Our portfolio spans education-first advisory, financial guidance, and end-to-end buyer support — reinforcing our reputation as a progressive force in the industry.</p>
+          <button class="btn-primary fade-up fade-up-delay-4" onclick="go('about')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Read More
+          </button>
+        </div>
+        <div class="fade-up fade-up-delay-2" style="position:relative">
+          <div style="position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900" alt="Premium Building" style="width:100%;aspect-ratio:3/4;object-fit:cover">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(28,25,23,0.7) 0%,transparent 50%)"></div>
+            <div style="position:absolute;bottom:28px;left:28px;right:28px;color:#fff">
+              <p style="font-family:var(--serif);font-size:1.5rem;font-weight:400;line-height:1.2">Excellence in every <em style="font-style:italic;color:var(--gold)">detail</em></p>
+              <p style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:6px;letter-spacing:0.05em;text-transform:uppercase">Artist's Impression</p>
+            </div>
+          </div>
+          <!-- Floating badge -->
+          <div style="position:absolute;top:-20px;right:-20px;background:var(--accent);color:#fff;border-radius:var(--r-lg);padding:20px 24px;box-shadow:var(--shadow-lg);text-align:center">
+            <div style="font-family:var(--serif);font-size:2rem;font-weight:400;line-height:1">50+</div>
+            <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;opacity:0.85">Years of Trust</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US / DREAMS WITHIN REACH ===== -->
+  <section class="section" style="background:var(--bg2);overflow:hidden">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:20px">
+        <span class="section-label fade-up">Why Choose Us?</span>
+        <h2 class="section-title fade-up fade-up-delay-1" style="font-size:clamp(2.2rem,5vw,3.8rem)">Dreams <em style="font-style:italic;color:var(--accent)">Within Reach</em></h2>
+        <p style="color:var(--muted);max-width:640px;margin:16px auto 56px;font-size:1rem;line-height:1.7" class="fade-up fade-up-delay-2">Innovation drives us forward. We continually elevate standards, creating residential and commercial journeys that reflect modern aspirations and uplift every family we serve.</p>
+      </div>
+
+      <!-- Cards carousel-style grid -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)" class="fade-up fade-up-delay-2">
+        <!-- Card 1 -->
+        <div style="position:relative;overflow:hidden;aspect-ratio:3/4;cursor:default" class="why-card">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Trust" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease)">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(28,25,23,0.88) 0%,rgba(28,25,23,0.2) 55%,transparent 100%)"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 24px;color:#fff">
+            <div style="width:40px;height:2px;background:var(--gold);margin-bottom:12px"></div>
+            <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin-bottom:8px">Trust &amp; Reliability</h3>
+            <p style="font-size:0.8rem;line-height:1.6;color:rgba(255,255,255,0.75)">We consistently deliver trustworthy advisory services, ensuring comprehensive and lasting client satisfaction.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div style="position:relative;overflow:hidden;aspect-ratio:3/4;cursor:default" class="why-card">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="Ethics" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease)">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(45,74,62,0.88) 0%,rgba(45,74,62,0.2) 55%,transparent 100%)"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 24px;color:#fff">
+            <div style="width:40px;height:2px;background:var(--gold);margin-bottom:12px"></div>
+            <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin-bottom:8px">Strong Ethics</h3>
+            <p style="font-size:0.8rem;line-height:1.6;color:rgba(255,255,255,0.75)">Integrity guides our every interaction, with Shirley Ji committed to maintaining rigorous ethical standards across every engagement.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div style="position:relative;overflow:hidden;aspect-ratio:3/4;cursor:default" class="why-card">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600" alt="Quality" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease)">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(181,101,29,0.88) 0%,rgba(181,101,29,0.2) 55%,transparent 100%)"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 24px;color:#fff">
+            <div style="width:40px;height:2px;background:var(--gold);margin-bottom:12px"></div>
+            <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin-bottom:8px">Quality &amp; Design</h3>
+            <p style="font-size:0.8rem;line-height:1.6;color:rgba(255,255,255,0.75)">Our commitment to quality is evident in advisory designs that balance innovation, aesthetics, and long-term value.</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div style="position:relative;overflow:hidden;aspect-ratio:3/4;cursor:default" class="why-card">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600" alt="Team" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease)">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(28,25,23,0.88) 0%,rgba(28,25,23,0.2) 55%,transparent 100%)"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 24px;color:#fff">
+            <div style="width:40px;height:2px;background:var(--gold);margin-bottom:12px"></div>
+            <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin-bottom:8px">Expert Team</h3>
+            <p style="font-size:0.8rem;line-height:1.6;color:rgba(255,255,255,0.75)">Our expert advisors ensure exceptional buyer outcomes with unmatched industry knowledge and genuine care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FIRST-TIME BUYER GUIDE (Homepage Teaser) ===== -->
+  <section style="background:var(--fg);padding:100px 48px;position:relative;overflow:hidden">
+    <!-- decorative bg text -->
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:clamp(6rem,15vw,16rem);font-weight:600;color:rgba(255,255,255,0.025);white-space:nowrap;pointer-events:none;user-select:none;line-height:1">YOUR HOME</div>
+    <div class="container" style="position:relative;z-index:2">
+      <div style="text-align:center;margin-bottom:64px">
+        <span style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-weight:500;display:block;margin-bottom:16px" class="fade-up">For First-Time Buyers</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:400;color:#fff;line-height:1.1;margin-bottom:16px" class="fade-up fade-up-delay-1">Your roadmap to <em style="font-style:italic;color:var(--gold)">owning your first home</em></h2>
+        <p style="color:rgba(255,255,255,0.5);max-width:540px;margin:0 auto;font-size:0.95rem;line-height:1.7" class="fade-up fade-up-delay-2">We've broken the journey into simple, actionable stages. Follow the path, lean on your advisor, and arrive at your new front door with confidence.</p>
+      </div>
+
+      <!-- Timeline steps -->
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative" class="fade-up fade-up-delay-2" id="ftb-timeline">
+        <!-- connecting line -->
+        <div style="position:absolute;top:36px;left:10%;right:10%;height:1px;background:linear-gradient(to right,var(--gold),rgba(201,169,110,0.2));z-index:0"></div>
+        
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 0 6px rgba(181,101,29,0.15)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+          </div>
+          <h4 style="font-family:var(--serif);font-size:1.05rem;color:#fff;margin-bottom:8px;font-weight:500">Know Your Budget</h4>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.6">Understand your income, savings, and credit before you begin.</p>
+        </div>
+
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--accent2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 0 6px rgba(45,74,62,0.2)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+          </div>
+          <h4 style="font-family:var(--serif);font-size:1.05rem;color:#fff;margin-bottom:8px;font-weight:500">Get Pre-Approved</h4>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.6">A lender letter makes your offer competitive from day one.</p>
+        </div>
+
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 0 6px rgba(201,169,110,0.2)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          </div>
+          <h4 style="font-family:var(--serif);font-size:1.05rem;color:#fff;margin-bottom:8px;font-weight:500">Find Your Home</h4>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.6">Tour curated listings with your advisor guiding every visit.</p>
+        </div>
+
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 0 6px rgba(181,101,29,0.15)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+          </div>
+          <h4 style="font-family:var(--serif);font-size:1.05rem;color:#fff;margin-bottom:8px;font-weight:500">Negotiate &amp; Inspect</h4>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.6">Strategic offer + thorough inspection = protected investment.</p>
+        </div>
+
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--accent2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 0 0 6px rgba(45,74,62,0.2)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4 style="font-family:var(--serif);font-size:1.05rem;color:#fff;margin-bottom:8px;font-weight:500">Close &amp; Move In</h4>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.6">We walk you to the finish line and hand you the keys.</p>
+        </div>
+      </div>
+
+      <!-- CTA row -->
+      <div style="text-align:center;margin-top:56px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap" class="fade-up fade-up-delay-3">
+        <button class="btn-primary" onclick="go('guide')">Read the Full Buyer Guide</button>
+        <button class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.2)" onclick="go('booking')">Book a Free Consultation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ASSOCIATE COMPANIES + BANKING PARTNERS ===== -->
+  <section class="section" style="background:var(--surface)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1px 1fr;gap:64px;align-items:start">
+
+        <!-- Associate Companies -->
+        <div>
+          <span class="section-label fade-up">Our Ecosystem</span>
+          <h2 class="section-title fade-up fade-up-delay-1" style="font-size:clamp(1.6rem,3vw,2.4rem)">Associate <em style="font-style:italic">Companies</em></h2>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin:12px 0 32px" class="fade-up fade-up-delay-2">Shirley Ji is always exploring new growth avenues. Our ventures span diverse sectors, including education, sports, logistics, and redevelopment.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px" class="fade-up fade-up-delay-3">
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;display:flex;align-items:center;justify-content:center;min-height:80px;transition:all 0.3s;cursor:default" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+              <span style="font-family:var(--serif);font-size:0.9rem;font-weight:600;text-align:center;color:var(--fg2)">Shirley Ji Global School</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;display:flex;align-items:center;justify-content:center;min-height:80px;transition:all 0.3s;cursor:default" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+              <span style="font-family:var(--serif);font-size:0.9rem;font-weight:600;text-align:center;color:var(--fg2)">i-Land Sports Academy</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;display:flex;align-items:center;justify-content:center;min-height:80px;transition:all 0.3s;cursor:default" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+              <span style="font-family:var(--serif);font-size:0.9rem;font-weight:600;text-align:center;color:var(--fg2)">Safe Vault Services</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;display:flex;align-items:center;justify-content:center;min-height:80px;transition:all 0.3s;cursor:default" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+              <span style="font-family:var(--serif);font-size:0.9rem;font-weight:600;text-align:center;color:var(--fg2)">Shirley Ji Logistic Park</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;display:flex;align-items:center;justify-content:center;min-height:80px;grid-column:span 2;transition:all 0.3s;cursor:default" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+              <span style="font-family:var(--serif);font-size:0.9rem;font-weight:600;text-align:center;color:var(--fg2)">Shirley Ji Redevelopment Cell</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider line -->
+        <div style="background:var(--border);height:100%;min-height:400px;align-self:stretch"></div>
+
+        <!-- Banking Partners -->
+        <div>
+          <span class="section-label fade-up">Trusted Finance</span>
+          <h2 class="section-title fade-up fade-up-delay-1" style="font-size:clamp(1.6rem,3vw,2.4rem)">Banking <em style="font-style:italic">Partners</em></h2>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin:12px 0 32px" class="fade-up fade-up-delay-2">Partnerships are integral to our philosophy. We collaborate with esteemed financial institutions who share our commitment to excellence and buyer welfare.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px" class="fade-up fade-up-delay-3">
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:80px;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent2)';this.style.background='var(--bg2)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+              <div style="width:32px;height:32px;border-radius:6px;background:linear-gradient(135deg,#E84B3A,#c0392b);display:flex;align-items:center;justify-content:center">
+                <span style="color:#fff;font-size:0.6rem;font-weight:700">AB</span>
+              </div>
+              <span style="font-size:0.72rem;font-weight:600;text-align:center;color:var(--fg2)">Aditya Birla Capital</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:80px;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent2)';this.style.background='var(--bg2)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+              <div style="width:32px;height:32px;border-radius:6px;background:#004C97;display:flex;align-items:center;justify-content:center">
+                <span style="color:#fff;font-size:0.65rem;font-weight:700">HDFC</span>
+              </div>
+              <span style="font-size:0.72rem;font-weight:600;text-align:center;color:var(--fg2)">HDFC Bank</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:80px;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent2)';this.style.background='var(--bg2)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+              <div style="width:32px;height:32px;border-radius:6px;background:#22409A;display:flex;align-items:center;justify-content:center">
+                <span style="color:#fff;font-size:0.65rem;font-weight:700">SBI</span>
+              </div>
+              <span style="font-size:0.72rem;font-weight:600;text-align:center;color:var(--fg2)">State Bank of India</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:80px;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent2)';this.style.background='var(--bg2)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+              <div style="width:32px;height:32px;border-radius:6px;background:#003580;display:flex;align-items:center;justify-content:center">
+                <span style="color:#fff;font-size:0.55rem;font-weight:700">TATA</span>
+              </div>
+              <span style="font-size:0.72rem;font-weight:600;text-align:center;color:var(--fg2)">Tata Capital</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:80px;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent2)';this.style.background='var(--bg2)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+              <div style="width:32px;height:32px;border-radius:6px;background:#F7521E;display:flex;align-items:center;justify-content:center">
+                <span style="color:#fff;font-size:0.55rem;font-weight:700">ICICI</span>
+              </div>
+              <span style="font-size:0.72rem;font-weight:600;text-align:center;color:var(--fg2)">ICICI Bank</span>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:80px;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent2)';this.style.background='var(--bg2)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+              <div style="width:32px;height:32px;border-radius:6px;background:#6E3B9E;display:flex;align-items:center;justify-content:center">
+                <span style="color:#fff;font-size:0.55rem;font-weight:700">AXIS</span>
+              </div>
+              <span style="font-size:0.72rem;font-weight:600;text-align:center;color:var(--fg2)">Axis Bank</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--muted);margin-top:16px" class="fade-up fade-up-delay-4">+ 12 more banking and financial partners available to our clients.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="section-title fade-up">Ready to find <em style="font-style:italic;color:var(--gold)">your</em> home?</h2>
+      <p class="fade-up fade-up-delay-1">Book a free, no-obligation consultation. Let's talk about your goals.</p>
+      <div class="btns fade-up fade-up-delay-2">
+        <button class="btn-primary" onclick="go('booking')">Book Free Consultation</button>
+        <button class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.25)" onclick="go('calculator')">Try the Calculator</button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /home -->
+
+<!-- ======================================================= CALCULATOR ======================================================= -->
+<div id="page-calculator" class="page">
+  <section class="section" style="background:var(--bg);min-height:100vh">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px">
+        <span class="section-label">Financial Planning</span>
+        <h1 class="section-title">Mortgage Calculator</h1>
+        <p class="section-sub" style="margin:0 auto">Estimate your monthly payments in real-time and plan your budget with confidence.</p>
+      </div>
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <h3 style="font-family:var(--serif);font-size:1.3rem;margin-bottom:28px;font-weight:500">Adjust Your Numbers</h3>
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <div>
+              <label class="field-label">Property Price</label>
+              <input type="range" class="range-track" id="c-price" min="100000" max="2000000" step="10000" value="600000" oninput="calcUpdate()">
+              <div style="display:flex;justify-content:space-between;font-size:0.82rem;margin-top:6px">
+                <span style="color:var(--muted)">$100k</span>
+                <span id="c-price-val" style="font-weight:600;color:var(--accent)">$600,000</span>
+                <span style="color:var(--muted)">$2M</span>
+              </div>
+            </div>
+            <div>
+              <label class="field-label">Down Payment</label>
+              <input type="range" class="range-track" id="c-down" min="5" max="50" value="20" oninput="calcUpdate()">
+              <div style="display:flex;justify-content:space-between;font-size:0.82rem;margin-top:6px">
+                <span style="color:var(--muted)">5%</span>
+                <span id="c-down-val" style="font-weight:600">20% — $120,000</span>
+                <span style="color:var(--muted)">50%</span>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div>
+                <label class="field-label">Interest Rate (%)</label>
+                <input type="number" class="field" id="c-rate" value="6.5" step="0.1" oninput="calcUpdate()">
+              </div>
+              <div>
+                <label class="field-label">Loan Term</label>
+                <select class="field" id="c-term" onchange="calcUpdate()">
+                  <option value="30">30 Years</option>
+                  <option value="20">20 Years</option>
+                  <option value="15">15 Years</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Educational -->
+          <div style="margin-top:40px;padding:24px;background:var(--bg2);border-radius:var(--r-lg)">
+            <h4 style="font-family:var(--serif);font-size:1.1rem;margin-bottom:12px;font-weight:500">What does this mean?</h4>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:12px"><strong style="color:var(--fg)">EMI (Equated Monthly Installment)</strong> is the fixed amount you pay each month, covering both principal and interest.</p>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.7"><strong style="color:var(--fg)">Down payment</strong> reduces your loan size and can lower your interest rate. A 20% down payment avoids private mortgage insurance (PMI).</p>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="calc-result">
+          <p style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px">Monthly Payment</p>
+          <div class="calc-big-num" id="c-emi">$3,028</div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:6px;margin-bottom:32px">Principal + Interest only</p>
+
+          <div style="display:flex;flex-direction:column;gap:14px;border-top:1px solid rgba(255,255,255,0.08);padding-top:24px">
+            <div style="display:flex;justify-content:space-between;font-size:0.85rem">
+              <span style="color:rgba(255,255,255,0.45)">Loan Amount</span>
+              <span id="c-loan" style="font-weight:500">$480,000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.85rem">
+              <span style="color:rgba(255,255,255,0.45)">Total Interest Paid</span>
+              <span id="c-interest" style="font-weight:500">$610,112</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.85rem">
+              <span style="color:rgba(255,255,255,0.45)">Total Cost</span>
+              <span id="c-total" style="font-weight:500">$1,090,112</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.85rem">
+              <span style="color:rgba(255,255,255,0.45)">Est. Property Tax/mo</span>
+              <span style="font-weight:500">~$500</span>
+            </div>
+          </div>
+
+          <button class="btn-primary" style="width:100%;justify-content:center;margin-top:32px" onclick="go('booking')">
+            Discuss Financing Options
+          </button>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.25);text-align:center;margin-top:12px">Results are estimates only. Contact us for accurate figures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================================================= BUYER GUIDE ======================================================= -->
+<div id="page-guide" class="page">
+  <section class="section" style="background:var(--bg);min-height:100vh">
+    <div class="container">
+      <div class="container-md" style="text-align:center;margin-bottom:56px">
+        <span class="section-label">First-Time Buyer</span>
+        <h1 class="section-title">Your Complete Buyer Guide</h1>
+        <p class="section-sub" style="margin:0 auto">Everything you need to know before making the biggest purchase of your life — explained simply.</p>
+      </div>
+      <div class="container-md">
+        <div class="guide-item fade-up" style="border-left:3px solid var(--accent)">
+          <div class="guide-num">01</div>
+          <div>
+            <h3 class="guide-title">Assess Your Readiness</h3>
+            <p class="guide-desc">Before you begin searching, understand your financial position. Review your credit score, savings, and monthly income to set realistic expectations.</p>
+            <div class="guide-checks">
+              <div class="check"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Aim for a credit score of 620 or higher</div>
+              <div class="check"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Calculate your debt-to-income ratio (ideally under 43%)</div>
+              <div class="check"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Budget for closing costs (typically 2–5% of purchase price)</div>
+            </div>
+          </div>
+        </div>
+        <div class="guide-item fade-up fade-up-delay-1" style="border-left:3px solid var(--accent2)">
+          <div class="guide-num">02</div>
+          <div>
+            <h3 class="guide-title">Get Pre-Approved</h3>
+            <p class="guide-desc">A pre-approval letter from a lender tells sellers you're a serious buyer and gives you a clear, firm budget to work with. It involves a credit check and document review.</p>
+            <div class="guide-checks">
+              <div class="check"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Gather W-2s, pay stubs, and bank statements</div>
+              <div class="check"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Compare at least 3 lenders for the best rate</div>
+            </div>
+          </div>
+        </div>
+        <div class="guide-item fade-up fade-up-delay-2" style="border-left:3px solid var(--accent)">
+          <div class="guide-num">03</div>
+          <div>
+            <h3 class="guide-title">House Hunting</h3>
+            <p class="guide-desc">Create a prioritized list of must-haves vs. nice-to-haves. Visit open houses and private showings with your Shirley Ji advisor, who helps you see beyond staging.</p>
+            <div class="guide-checks">
+              <div class="check"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Research neighborhoods, schools, and commutes</div>
+              <div class="check"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Look beyond cosmetics — check structure and systems</div>
+            </div>
+          </div>
+        </div>
+        <div class="guide-item fade-up fade-up-delay-3" style="border-left:3px solid var(--accent2)">
+          <div class="guide-num">04</div>
+          <div>
+            <h3 class="guide-title">Making an Offer</h3>
+            <p class="guide-desc">We help you craft a competitive, strategic offer based on market data — not emotion. Understand contingencies, earnest money, and negotiation levers.</p>
+          </div>
+        </div>
+        <div class="guide-item fade-up" style="border-left:3px solid var(--accent)">
+          <div class="guide-num">05</div>
+          <div>
+            <h3 class="guide-title">Inspection & Due Diligence</h3>
+            <p class="guide-desc">Never skip the inspection. A licensed inspector examines the home's structure, systems, and safety. Use findings to negotiate repairs or price adjustments.</p>
+          </div>
+        </div>
+        <div class="guide-item fade-up fade-up-delay-1" style="border-left:3px solid var(--accent2)">
+          <div class="guide-num">06</div>
+          <div>
+            <h3 class="guide-title">Closing Day</h3>
+            <p class="guide-desc">Review all closing documents carefully. You'll sign the mortgage, pay closing costs, and receive your keys. Shirley Ji reviews every document with you before you sign.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:40px;text-align:center" class="fade-up">
+          <p style="color:var(--muted);margin-bottom:20px">Ready to start? Book a free consultation with an advisor.</p>
+          <button class="btn-primary" onclick="go('booking')">Book Free Consultation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================================================= ABOUT ======================================================= -->
+<div id="page-about" class="page">
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <div class="two-col" style="margin-bottom:80px">
+        <div>
+          <span class="section-label fade-up">About Us</span>
+          <h1 class="section-title fade-up fade-up-delay-1">Built on trust.<br>Driven by <em style="font-style:italic;color:var(--accent)">purpose.</em></h1>
+          <div class="divider fade-up fade-up-delay-2"></div>
+          <p class="section-sub fade-up fade-up-delay-2">Shirley Ji was founded to change how people experience buying a home. We believe in education over pressure, transparency over tactics.</p>
+          <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;margin-top:16px" class="fade-up fade-up-delay-3">Our advisors have guided over 500 families through this process with patience, expertise, and genuine care. We don't just close transactions — we build lasting relationships and educate people to make the best decision for their lives.</p>
+        </div>
+        <div class="img-stack fade-up fade-up-delay-2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Shirley Ji Office">
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div style="margin-bottom:80px">
+        <div style="text-align:center;margin-bottom:40px">
+          <span class="section-label fade-up">Our Values</span>
+          <h2 class="section-title fade-up fade-up-delay-1">What guides every decision we make</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card fade-up fade-up-delay-1">
+            <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="value-title">Transparency</div>
+            <p class="value-desc">No hidden fees, no unclear motives. You always know exactly what we're doing and why.</p>
+          </div>
+          <div class="value-card fade-up fade-up-delay-2">
+            <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div class="value-title">Education</div>
+            <p class="value-desc">We empower you with knowledge so every decision is informed and confident.</p>
+          </div>
+          <div class="value-card fade-up fade-up-delay-3">
+            <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="value-title">Client-First</div>
+            <p class="value-desc">Your goals always come before our goals. Simple as that.</p>
+          </div>
+          <div class="value-card fade-up fade-up-delay-4">
+            <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="value-title">Long-term Thinking</div>
+            <p class="value-desc">We help you make decisions that serve your life for decades, not just today.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div>
+        <div style="text-align:center;margin-bottom:40px">
+          <span class="section-label fade-up">Our Team</span>
+          <h2 class="section-title fade-up fade-up-delay-1">The advisors behind your journey</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-card fade-up fade-up-delay-1">
+            <div class="team-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Advisor"></div>
+            <div class="team-info"><div class="team-name">David Morrison</div><div class="team-title">Founder & Lead Advisor</div></div>
+          </div>
+          <div class="team-card fade-up fade-up-delay-2">
+            <div class="team-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400" alt="Advisor"></div>
+            <div class="team-info"><div class="team-name">Elena Vasquez</div><div class="team-title">Senior Buyer Advisor</div></div>
+          </div>
+          <div class="team-card fade-up fade-up-delay-3">
+            <div class="team-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400" alt="Advisor"></div>
+            <div class="team-info"><div class="team-name">James Okonkwo</div><div class="team-title">Mortgage & Finance Lead</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================================================= BLOG ======================================================= -->
+<div id="page-blog" class="page">
+  <section class="section" style="background:var(--bg);min-height:100vh">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px">
+        <span class="section-label fade-up">Insights & Advice</span>
+        <h1 class="section-title fade-up fade-up-delay-1">Knowledge that moves you forward</h1>
+        <p class="section-sub fade-up fade-up-delay-2" style="margin:0 auto">Educational articles and market insights for first-time buyers and aspiring homeowners.</p>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card fade-up fade-up-delay-1">
+          <div class="blog-img"><img decoding="async" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600" alt="Blog"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Buying Tips</div>
+            <h3 class="blog-title">10 Questions Every First-Time Buyer Must Ask</h3>
+            <p class="blog-excerpt">The right questions can reveal hidden costs, risks, and opportunities that most buyers miss.</p>
+            <div class="blog-meta"><span>March 2025</span><span class="blog-read">Read Article →</span></div>
+          </div>
+        </article>
+        <article class="blog-card fade-up fade-up-delay-2">
+          <div class="blog-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600" alt="Blog"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Finance</div>
+            <h3 class="blog-title">Down Payment Strategies: From Savings to Assistance</h3>
+            <p class="blog-excerpt">How to build your down payment faster, and programs that can help bridge the gap.</p>
+            <div class="blog-meta"><span>Feb 2025</span><span class="blog-read">Read Article →</span></div>
+          </div>
+        </article>
+        <article class="blog-card fade-up fade-up-delay-3">
+          <div class="blog-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Blog"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Market</div>
+            <h3 class="blog-title">2025 Housing Market: What Buyers Need to Know</h3>
+            <p class="blog-excerpt">An honest look at inventory, interest rates, and what to expect when you're ready to buy.</p>
+            <div class="blog-meta"><span>Jan 2025</span><span class="blog-read">Read Article →</span></div>
+          </div>
+        </article>
+        <article class="blog-card fade-up fade-up-delay-1">
+          <div class="blog-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1582407947304-fd86f28f1ae5?w=600" alt="Blog"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Process</div>
+            <h3 class="blog-title">The Closing Process Explained Step by Step</h3>
+            <p class="blog-excerpt">What happens between accepted offer and getting your keys? We break it all down.</p>
+            <div class="blog-meta"><span>Dec 2024</span><span class="blog-read">Read Article →</span></div>
+          </div>
+        </article>
+        <article class="blog-card fade-up fade-up-delay-2">
+          <div class="blog-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600" alt="Blog"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Inspection</div>
+            <h3 class="blog-title">What a Home Inspector Actually Looks For</h3>
+            <p class="blog-excerpt">Understanding what your inspector checks — and what it means for your offer.</p>
+            <div class="blog-meta"><span>Nov 2024</span><span class="blog-read">Read Article →</span></div>
+          </div>
+        </article>
+        <article class="blog-card fade-up fade-up-delay-3">
+          <div class="blog-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600" alt="Blog"></div>
+          <div class="blog-body">
+            <div class="blog-cat">First-Time Buyer</div>
+            <h3 class="blog-title">Common Mistakes First-Time Buyers Make</h3>
+            <p class="blog-excerpt">Avoid these 8 costly mistakes that trip up most first-time homebuyers.</p>
+            <div class="blog-meta"><span>Oct 2024</span><span class="blog-read">Read Article →</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================================================= CONTACT ======================================================= -->
+<div id="page-contact" class="page">
+  <section class="section" style="background:var(--bg);min-height:100vh">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px">
+        <span class="section-label fade-up">Get In Touch</span>
+        <h1 class="section-title fade-up fade-up-delay-1">We'd love to hear from you</h1>
+      </div>
+      <div class="contact-grid">
+        <div class="fade-up">
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="ci-title">Our Office</div><div class="ci-val">123 Heritage Blvd, Portland, OR 97201</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.11 12a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="ci-title">Phone</div><div class="ci-val">(503) 555-0123</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="ci-title">Email</div><div class="ci-val"><a href="mailto:hello@meridianestates.com">hello@meridianestates.com</a></div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="ci-title">Hours</div><div class="ci-val">Mon–Fri 9am–6pm · Sat 10am–4pm</div></div>
+          </div>
+        </div>
+        <div class="fade-up fade-up-delay-2">
+          <div id="contact-form-wrap" class="calc-panel">
+            <h3 style="font-family:var(--serif);font-size:1.3rem;margin-bottom:24px;font-weight:500">Send a Message</h3>
+            <form id="contact-form" onsubmit="submitContact(event)" style="display:flex;flex-direction:column;gap:16px">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                <div><label class="field-label">First Name</label><input type="text" class="field" required placeholder="Jane"></div>
+                <div><label class="field-label">Last Name</label><input type="text" class="field" required placeholder="Smith"></div>
+              </div>
+              <div><label class="field-label">Email</label><input type="email" class="field" required placeholder="jane@example.com"></div>
+              <div><label class="field-label">Subject</label><select class="field"><option>General Inquiry</option><option>First-Time Buyer Question</option><option>Appointment Request</option><option>Other</option></select></div>
+              <div><label class="field-label">Message</label><textarea class="field" rows="4" placeholder="How can we help you?" required></textarea></div>
+              <button type="submit" class="btn-primary" style="justify-content:center">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================================================= BOOKING ======================================================= -->
+<div id="page-booking" class="page">
+  <section class="section" style="background:var(--bg);min-height:100vh">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px">
+        <span class="section-label fade-up">Free Consultation</span>
+        <h1 class="section-title fade-up fade-up-delay-1">Book Your Appointment</h1>
+        <p class="section-sub fade-up fade-up-delay-2" style="margin:0 auto">Choose a date and time that works for you. All consultations are free and no-obligation.</p>
+      </div>
+
+      <div id="booking-wrap" style="max-width:900px;margin:0 auto">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+          <!-- Calendar -->
+          <div class="calc-panel">
+            <div class="cal-header">
+              <button onclick="prevMonth()" style="width:32px;height:32px;border-radius:var(--r);background:var(--bg2);display:flex;align-items:center;justify-content:center;cursor:pointer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <span class="cal-month" id="cal-label"></span>
+              <button onclick="nextMonth()" style="width:32px;height:32px;border-radius:var(--r);background:var(--bg2);display:flex;align-items:center;justify-content:center;cursor:pointer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+            <div class="cal-grid" id="cal-grid"></div>
+          </div>
+
+          <!-- Times + Form -->
+          <div id="booking-right" class="calc-panel" style="display:none">
+            <h4 style="font-family:var(--serif);font-size:1.1rem;font-weight:500;margin-bottom:4px">Available Times</h4>
+            <p id="selected-date-label" style="font-size:0.82rem;color:var(--muted);margin-bottom:16px"></p>
+            <div class="time-grid" id="time-grid"></div>
+            <div id="booking-form-wrap" style="display:none;margin-top:24px;border-top:1px solid var(--border);padding-top:24px">
+              <form id="booking-form" onsubmit="submitBooking(event)" style="display:flex;flex-direction:column;gap:12px">
+                <div><label class="field-label">Full Name</label><input type="text" class="field" required placeholder="Jane Smith"></div>
+                <div><label class="field-label">Email</label><input type="email" class="field" required placeholder="jane@example.com"></div>
+                <div><label class="field-label">Phone</label><input type="tel" class="field" required placeholder="(503) 555-0000"></div>
+                <button type="submit" class="btn-primary" style="justify-content:center;margin-top:4px">Confirm Booking</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust -->
+        <div style="margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;text-align:center">
+            <div style="font-family:var(--serif);font-size:1.4rem;color:var(--accent)">Free</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:4px">No obligation</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;text-align:center">
+            <div style="font-family:var(--serif);font-size:1.4rem;color:var(--accent)">60 min</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:4px">Full advisory session</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;text-align:center">
+            <div style="font-family:var(--serif);font-size:1.4rem;color:var(--accent)">Expert</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:4px">Dedicated advisor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="logo-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+      Shirley Ji
+    </div>
+    <div class="footer-links">
+      <a onclick="go('guide')">Buyer Guide</a>
+      <a onclick="go('calculator')">Calculator</a>
+      <a onclick="go('about')">About</a>
+      <a onclick="go('blog')">Insights</a>
+      <a onclick="go('contact')">Contact</a>
+    </div>
+    <div class="footer-copy">© 2025 Shirley Ji. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ===== STICKY CTA ===== -->
+<div id="sticky-cta">
+  <button class="btn-dark" onclick="go('booking')" style="display:flex;align-items:center;gap:8px;padding:12px 20px;border-radius:var(--r);box-shadow:var(--shadow-lg)">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Book Free Consultation
+  </button>
+</div>
+
+<!-- ===== AI CHATBOT ===== -->
+<div id="chatbot-wrap">
+  <div id="chat-window">
+    <div id="chat-header">
+      <div class="chat-avatar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      </div>
+      <div>
+        <div class="chat-hname">Shirley Ji Assistant</div>
+        <div class="chat-hstatus"><span class="online-dot"></span>Online now</div>
+      </div>
+    </div>
+    <div id="chat-body">
+      <div class="chat-bubble bubble-bot">Hi! I'm your Shirley Ji advisor. I can answer questions about buying your first home, mortgages, or our process. How can I help? 👋</div>
+    </div>
+    <form id="chat-form" onsubmit="sendChat(event)">
+      <input type="text" id="chat-input" placeholder="Ask about mortgages, the process…" autocomplete="off">
+      <button type="submit" id="chat-send">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </form>
+  </div>
+  <button id="chat-toggle" onclick="toggleChat()">
+    <svg id="chat-open-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <svg id="chat-close-icon" style="display:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+
+
+<!-- ============================================================
+     SHIRLEY JI — ANIMATION LAYER — FINAL
+     ============================================================ -->
+
+
+<!-- DOM: Scroll bar -->
+<div id="scroll-bar"></div>
+
+<!-- DOM: Page transition grid -->
+<div id="pt">
+  <div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+  <div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+  <div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+</div>
+<div id="pt-name"></div>
+
+<!-- DOM: Section nav dots -->
+<div id="s-dots"></div>
+
+<!-- DOM: Preloader -->
+<div id="preloader">
+  <div class="pre-half" id="pre-top"></div>
+  <div class="pre-half" id="pre-bot"></div>
+</div>
+<div id="pre-stage">
+  <div class="pre-line"><span class="pre-word" id="pw0">Find</span></div>
+  <div class="pre-line"><span class="pre-word" id="pw1">Your</span></div>
+  <div class="pre-line"><span class="pre-word" id="pw2">Home.</span></div>
+</div>
+<div id="pre-rule"></div>
+<div id="pre-foot">
+  <div id="pre-foot-brand">Shirley Ji</div>
+  <div id="pre-foot-count">0%</div>
+</div>
+<div id="pre-track"><div id="pre-fill"></div></div>
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
